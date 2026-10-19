@@ -6,7 +6,7 @@ function TodoStats() {
   const totalTodos = todos.length;
 
   const completedTodos = todos.filter(
-    (todo) => todo.completed
+    (todo) => todo.completed,
   ).length;
 
   const activeTodos = totalTodos - completedTodos;
@@ -17,10 +17,10 @@ function TodoStats() {
         Total Tasks <strong>{totalTodos}</strong>
       </p>
       <p>
-        Completed <strong>{completedTodos}</strong>
+        Remaining <strong>{activeTodos}</strong>
       </p>
       <p>
-        Remaining <strong>{activeTodos}</strong>
+        Completed <strong>{completedTodos}</strong>
       </p>
     </section>
   );

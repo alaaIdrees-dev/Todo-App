@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LuPlus } from "react-icons/lu";
 import useTodoStore from "../store/usetodostore";
 
 function AddTodo() {
@@ -18,9 +19,7 @@ function AddTodo() {
 
   return (
     <form className="add-todo" onSubmit={handleSubmit}>
-      <button type="submit" className="add-todo__btn" aria-label="Add task">
-        <span aria-hidden="true">+</span>
-      </button>
+    
       <input
         type="text"
         className="add-todo__input"
@@ -28,7 +27,9 @@ function AddTodo() {
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Add a new task..."
         aria-label="New task"
-      />
+      />  <button type="submit" className="add-todo__btn" aria-label="Add task">
+        <LuPlus size={22} aria-hidden="true" />
+      </button>
     </form>
   );
 }

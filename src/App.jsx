@@ -10,9 +10,9 @@ function App() {
   return (
     <main className="app">
       <h1 className="app__title">My Tasks</h1>
+      <AddTodo />
       <TodoFilters filter={filter} setFilter={setFilter} />
       <TodoList filter={filter} />
-      <AddTodo />
       <TodoStats />
     </main>
   );

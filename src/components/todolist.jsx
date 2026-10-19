@@ -16,6 +16,10 @@ function TodoList({ filter }) {
     return true;
   });
 
+  if (todos.length === 0) {
+    return <p className="todo-empty">No tasks yet</p>;
+  }
+
   return (
     <ul className="todo-list">
       {filteredTodos.map((todo) => (
